@@ -7,7 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
-
+/**
+ * 通过注解的形式执行定时任务
+ */
 @Component
 public class JobService {
     private static org.apache.log4j.Logger logger = org.apache.log4j.Logger.getLogger(JobService.class);
