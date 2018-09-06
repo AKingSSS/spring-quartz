@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="king-task" />
+        <module name="king-task-domain" />
+        <module name="king-task-persistence" />
+        <module name="king-task-utils" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="demo" target="1.5" />
+      <module name="king-task" target="1.6" />
+      <module name="king-task-domain" target="1.5" />
+      <module name="king-task-manager" target="1.5" />
+      <module name="king-task-persistence" target="1.5" />
+      <module name="king-task-utils" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

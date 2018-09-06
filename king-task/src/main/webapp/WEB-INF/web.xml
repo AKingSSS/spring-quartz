@@ -1,0 +1,77 @@
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+        http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <display-name>king</display-name>
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+		<param-value>
+            ./resource/king-config.xml
+        </param-value>
+    </context-param>
+    <!-- 全局配置文件路径 -->
+	<env-entry>
+		<env-entry-name>KINGConfigs</env-entry-name>
+		<env-entry-type>java.lang.String</env-entry-type>
+		<env-entry-value>/app/king/conf/server/KINGOrgTask.properties</env-entry-value>
+	</env-entry>
+    <listener>
+        <listener-class>
+            org.springframework.web.context.ContextLoaderListener
+        </listener-class>
+    </listener>
+    
+    <filter>  
+      <filter-name>CharacterEncodingFilter</filter-name>  
+      <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>  
+      <init-param>  
+          <param-name>encoding</param-name>  
+          <param-value>utf-8</param-value>  
+      </init-param>
+       <init-param>
+           <param-name>forceEncoding</param-name>
+           <param-value>true</param-value>
+       </init-param>
+    </filter>  
+    <filter-mapping>  
+     <filter-name>CharacterEncodingFilter</filter-name>  
+     <url-pattern>/*</url-pattern>  
+    </filter-mapping>
+
+
+    <servlet>
+        <servlet-name>springmvc</servlet-name>
+        <servlet-class>
+            org.springframework.web.servlet.DispatcherServlet
+        </servlet-class>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>
+                ./resource/king-servlet.xml
+            </param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+	<!-- 使Spring支持request与session的scope,如:<bean id="loginAction" class="com.foo.LoginAction" scope="request"/> -->
+	<listener>
+	  <listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+	</listener>    
+    <!-- Spring 刷新Introspector防止内存泄露 -->
+	<listener>
+		<listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
+	</listener>
+	<!-- 系统初始化监听器 -->
+	<listener>
+		<listener-class>com.king.listener.SystemInitListener</listener-class>
+	</listener>
+
+    <servlet-mapping>
+        <servlet-name>springmvc</servlet-name>
+        <url-pattern>*.html</url-pattern>
+    </servlet-mapping>
+    <welcome-file-list>
+        <welcome-file>toIndex.jsp</welcome-file>
+    </welcome-file-list>
+
+</web-app>

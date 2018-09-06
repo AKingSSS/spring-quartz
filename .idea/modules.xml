@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/demo.iml" filepath="$PROJECT_DIR$/.idea/demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/king-task/king-task.iml" filepath="$PROJECT_DIR$/king-task/king-task.iml" />
+      <module fileurl="file://$PROJECT_DIR$/king-task-manager/king-task-domain/king-task-domain.iml" filepath="$PROJECT_DIR$/king-task-manager/king-task-domain/king-task-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/king-task-manager/king-task-manager.iml" filepath="$PROJECT_DIR$/king-task-manager/king-task-manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/king-task-manager/king-task-persistence/king-task-persistence.iml" filepath="$PROJECT_DIR$/king-task-manager/king-task-persistence/king-task-persistence.iml" />
+      <module fileurl="file://$PROJECT_DIR$/king-task-manager/king-task-utils/king-task-utils.iml" filepath="$PROJECT_DIR$/king-task-manager/king-task-utils/king-task-utils.iml" />
+    </modules>
+  </component>
+</project>
